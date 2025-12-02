@@ -18,14 +18,17 @@ protected:
     vector<vector<int>> adjList;
     vector<pair<pair<int, int>, double>> weightedEdgeList;
     NetworKit::Graph nkGraph;
+    string path;
 
 public:
-    void readGraph(const string& graphFileName); // Declare function here
+    GraphReader(const string& graphFileName);
+    void readGraph(); // Declare function here
     // You may also want to add getters to access nodes, edges, and adjList
     int getNodes() const { return nodes; }
     int getEdges() const { return edges; }
     int getOneIndexed() const { return oneIndexed; }
     int getWeighted() const { return weighted; }
+    string getPath() const { return path; }
     const vector<vector<int>>& getAdjList() const { return adjList; }
     const vector<pair<pair<int, int>, double>>& getWeightedEdgeList() const { return weightedEdgeList; }
     void generateFromWeightedEdgeList();

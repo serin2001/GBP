@@ -1,4 +1,4 @@
-#include "Solver.hpp"
+#include "GBPSolver.hpp"
 #include "Checker.hpp"
 
 #define RST   "\x1B[0m"

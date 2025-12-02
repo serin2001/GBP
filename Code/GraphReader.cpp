@@ -24,8 +24,12 @@ void GraphReader::generateNKGraph() {
     generateFromWeightedEdgeList();
 }
 
-void GraphReader::readGraph(const string& graphFileName) {
-    string filePath = "./Data/" + graphFileName;
+GraphReader::GraphReader(const string& graphFileName) {
+    this->path = "./Data/" + graphFileName;
+}
+
+void GraphReader::readGraph() {
+    string filePath = path; //"./Data/" + graphFileName;
     cout << filePath << endl;
     ifstream graphFile(filePath);
 
