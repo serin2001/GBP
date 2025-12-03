@@ -41,9 +41,7 @@ void GraphReader::readGraph() {
     string graphName;
     graphFile >> graphName; 
     graphFile >> nodes >> edges;
-    //int oneIndexed;
     graphFile >> oneIndexed;
-    //int weighted;
     graphFile >> weighted;
 
     for (int i = 0; i < edges; i++) {
@@ -54,8 +52,8 @@ void GraphReader::readGraph() {
         }
         if (weighted == 1)
             graphFile >> w;
-        else
-            w = 1.0; // Default weight for unweighted graphs
+//        else	// Default weight for unweighted graphs
+            w = 1.0;
 
         if (u > v)
             swap(u, v);
